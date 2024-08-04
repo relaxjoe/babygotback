@@ -33,12 +33,13 @@ router.get('/:id', async (req, res) => {
 
 // POST a new category
 router.post('/', async (req, res) => {
-  try {
+  console.log(req.body);
+  // try {
     const categoryData = await Category.create(req.body);
     res.status(201).json(categoryData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
+  // } catch (err) {
+  //   res.status(400).json(err);
+  //}
 });
 
 // PUT (update) a category by its `id` value
